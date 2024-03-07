@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:56:06 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/06 21:01:03 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:44:43 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ static int	ft_init_philos(t_state *s)
 	ths = (pthread_t *) malloc(sizeof(pthread_t) * s->arg.num_philo);
 	if (!ths)
 		return (free(&s->philos), R_ERROR);
+	s->threads = ths;
 	i = 0;
 	while (i < s->arg.num_philo)
 	{

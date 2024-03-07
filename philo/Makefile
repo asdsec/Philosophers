@@ -13,6 +13,7 @@ clean:
 	$(RM) $(NAME)
 
 fclean: clean
+	@rm -rf philo.dSYM
 
 re: fclean all
 

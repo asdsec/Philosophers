@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:43:54 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/06 21:11:38 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:45:05 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_dispose_state(t_state **state)
 	if (!state)
 		return ;
 	free((*state)->forks);
+	free((*state)->threads);
 	free((*state)->philos);
 	free(*state);
 	*state = NULL;

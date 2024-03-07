@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:15:12 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/06 21:20:55 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:45:49 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ typedef struct s_state
 	t_arg_data		arg;
 	pthread_mutex_t	*forks;
 	t_philo			*philos;
+	pthread_t		*threads;
 	struct timeval	tv;
 	u_int64_t		start_time;
 	bool			is_odd_philos;

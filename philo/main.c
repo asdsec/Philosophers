@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:14:02 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/06 21:19:37 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 17:39:48 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(int ac, char **av)
 	if (rsp != R_SUCCESS)
 		return (rsp);
 	ft_start(&s);
-	system("leaks philo");
 }
 
 static int	ft_check_arg(int ac, char **av)
