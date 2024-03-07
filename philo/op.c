@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 20:13:50 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/06 20:53:34 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 18:56:33 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ bool	ft_eat(t_philo *p)
 	ft_handle_life_eat(p);
 	ft_usleep(&p->state, p->arg.time_to_eat);
 	pthread_mutex_unlock(p->right);
-	return (pthread_mutex_unlock(p->left), ft_sleep(p));
+	pthread_mutex_unlock(p->left);
+	return (ft_sleep(p));
 }
 
 static void	ft_handle_life_eat(t_philo *p)

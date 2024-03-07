@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:56:06 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/07 16:44:43 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 18:31:39 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_init_state(t_state **s, int ac, char **av)
 {
 	*s = (t_state *) malloc(sizeof(t_state));
 	if (!*s)
-		return (ft_errmsg(3, "state cannot be allocated", NULL));
+		return (ft_errmsg(6, "state cannot be allocated", NULL));
 	ft_init_arg(*s, ac, av);
 	if (ft_init_forks(*s) != R_SUCCESS)
 		return (ft_errmsg(4, "forks cannot be initialized", s));
@@ -108,5 +108,4 @@ static void	ft_init_philo(t_state *s, pthread_t *ths, int32_t i)
 	s->philos[i].is_first_loop = true;
 	s->philos[i].last_eating_time = 0;
 	s->philos[i].eaten = 0;
-	s->philos[i].is_finish = false;
 }

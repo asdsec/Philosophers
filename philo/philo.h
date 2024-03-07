@@ -6,7 +6,7 @@
 /*   By: sademir <sademir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:15:12 by sademir           #+#    #+#             */
-/*   Updated: 2024/03/07 16:45:49 by sademir          ###   ########.fr       */
+/*   Updated: 2024/03/07 18:31:53 by sademir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ typedef struct s_philo
 	bool			is_first_loop;
 	u_int64_t		last_eating_time;
 	int32_t			eaten;
-	bool			is_finish;
 }	t_philo;
 
 typedef struct s_state
